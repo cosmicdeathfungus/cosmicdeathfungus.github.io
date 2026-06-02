@@ -1,0 +1,15 @@
+# Custom domain configuration for GitHub Pages.
+#
+# This file is intentionally commented out. To activate a custom domain:
+#   1. Register the domain (recommended: cosmicdeathfungus.org)
+#   2. Configure DNS records pointing to GitHub Pages:
+#        A     185.199.108.153
+#        A     185.199.109.153
+#        A     185.199.110.153
+#        A     185.199.111.153
+#        CNAME (for www) -> cosmicdeathfungus.github.io
+#   3. Replace this entire file's contents with a single line:
+#        cosmicdeathfungus.org
+#   4. Enable "Enforce HTTPS" in the repository's Pages settings.
+#
+# Until then, the site is served from https://cosmicdeathfungus.github.io

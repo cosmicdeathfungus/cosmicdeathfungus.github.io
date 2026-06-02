@@ -1,0 +1,23 @@
+# CODEOWNERS — defines who must review changes to protocol content.
+#
+# The original authors (or a trusted community maintainer account) hold
+# review authority over the canonical protocol. Replace the placeholder
+# handles below with the real GitHub usernames once known.
+#
+# Syntax: <path>  <owner1> <owner2> ...
+
+# Default: any maintainer may review general changes.
+*                           @cosmicdeathfungus/maintainers
+
+# Core protocol — authors only.
+/docs/nac-protocol/         @cosmicdeathfungus/authors
+/docs/maintenance-protocol/ @cosmicdeathfungus/authors
+/docs/science/              @cosmicdeathfungus/authors
+
+# Legal content — requires explicit maintainer sign-off.
+/LICENSE                    @cosmicdeathfungus/authors
+/docs/legal/                @cosmicdeathfungus/authors
+
+# Build / infrastructure.
+/.github/                   @cosmicdeathfungus/maintainers
+/mkdocs.yml                 @cosmicdeathfungus/maintainers
