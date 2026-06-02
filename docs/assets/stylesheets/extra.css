@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Cosmic Death Fungus — scientific-paper theme
+   Goal: understated, professional, journal-like. A neutral grey header that
+   reads the same in light and dark mode, serif body type, and restrained,
+   desaturated link colours reminiscent of an academic PDF.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Header / primary — identical neutral grey in BOTH colour schemes so it
+   stands out against the warm-white page in light mode and the dark page in
+   dark mode.
+   -------------------------------------------------------------------------- */
+:root {
+  --md-primary-fg-color:        #4b5158;   /* neutral slate grey */
+  --md-primary-fg-color--light: #5d646c;
+  --md-primary-fg-color--dark:  #3a3f44;
+  --md-primary-bg-color:        #f4f5f6;   /* text/icons sitting on the header */
+  --md-primary-bg-color--light: #c9cdd2;
+
+  /* Typeface tuning shared by both schemes. */
+  --md-text-font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+
+/* --------------------------------------------------------------------------
+   Light scheme — warm "paper" white with near-black ink and a restrained
+   academic blue for links (think a citation hyperlink in a journal PDF).
+   -------------------------------------------------------------------------- */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color:          #fbfbf8;  /* warm off-white, not pure #fff */
+  --md-default-bg-color--light:   #fbfbf8;
+  --md-default-fg-color:          hsla(210, 8%, 13%, 1);
+  --md-default-fg-color--light:   hsla(210, 8%, 13%, 0.66);
+  --md-default-fg-color--lighter: hsla(210, 8%, 13%, 0.34);
+  --md-default-fg-color--lightest:hsla(210, 8%, 13%, 0.08);
+
+  --md-typeset-color:    hsla(210, 8%, 13%, 1);
+  --md-typeset-a-color:  #2a5599;           /* steel/journal blue */
+  --md-accent-fg-color:  #2a5599;
+  --md-accent-fg-color--transparent: hsla(214, 56%, 38%, 0.1);
+
+  --md-code-bg-color:    #f1f1ec;           /* faint manila tint for code */
+  --md-footer-bg-color:  #33373b;
+  --md-footer-bg-color--dark: #2a2d31;
+}
+
+/* --------------------------------------------------------------------------
+   Dark scheme — neutralised slate (Material's default slate is blue-tinted);
+   off-white ink and a softened blue link colour for low-glare reading.
+   -------------------------------------------------------------------------- */
+[data-md-color-scheme="slate"] {
+  --md-hue: 215;
+
+  --md-default-bg-color:          #1b1e21;  /* neutral charcoal */
+  --md-default-bg-color--light:   #1b1e21;
+  --md-default-fg-color:          hsla(210, 12%, 94%, 1);
+  --md-default-fg-color--light:   hsla(210, 12%, 94%, 0.70);
+  --md-default-fg-color--lighter: hsla(210, 12%, 94%, 0.36);
+  --md-default-fg-color--lightest:hsla(210, 12%, 94%, 0.10);
+
+  --md-typeset-color:    hsla(210, 12%, 94%, 1);
+  --md-typeset-a-color:  #8fb6f0;           /* desaturated link blue */
+  --md-accent-fg-color:  #8fb6f0;
+  --md-accent-fg-color--transparent: hsla(216, 72%, 75%, 0.12);
+
+  --md-code-bg-color:    #24282c;
+  --md-footer-bg-color:  #15171a;
+  --md-footer-bg-color--dark: #101214;
+}
+
+/* --------------------------------------------------------------------------
+   Typography — give the body the cadence of a typeset paper: generous
+   leading, old-style numerals, and a comfortable measure.
+   -------------------------------------------------------------------------- */
+.md-typeset {
+  font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
+  line-height: 1.72;
+  font-size: 0.82rem;
+}
+
+/* Constrain the reading column so long lines stay paper-width. */
+.md-grid {
+  max-width: 58rem;
+}
+
+/* Headings: slightly tighter, firmly weighted, like section titles. */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset h1 {
+  font-size: 1.65rem;
+  line-height: 1.25;
+}
+
+/* A hairline rule under top-level section headings — a journal convention. */
+.md-typeset h2 {
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Justify body paragraphs with hyphenation for a typeset, columnar feel. */
+.md-typeset p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Links: understated — underline on hover rather than loud colour. */
+.md-typeset a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+/* Blockquotes read like pulled citations. */
+.md-typeset blockquote {
+  border-left: 2px solid var(--md-default-fg-color--lighter);
+  color: var(--md-default-fg-color--light);
+  font-style: italic;
+}
+
+/* Tables: clean horizontal rules only, the way data tables are set in papers. */
+.md-typeset table:not([class]) {
+  border: none;
+  font-size: 0.74rem;
+}
+.md-typeset table:not([class]) th {
+  background: transparent;
+  border-bottom: 2px solid var(--md-default-fg-color--light);
+  font-weight: 600;
+}
+.md-typeset table:not([class]) td {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Keep code monospaced and at a slightly smaller, footnote-like size. */
+.md-typeset code,
+.md-typeset pre > code {
+  font-size: 0.74rem;
+}

@@ -10,14 +10,14 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: teal
-      accent: deep orange
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: teal
-      accent: deep orange
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -33,8 +33,11 @@ theme:
     - content.action.view
     - content.code.copy
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Source Serif 4
+    code: JetBrains Mono
+
+extra_css:
+  - assets/stylesheets/extra.css
 
 plugins:
   - search
