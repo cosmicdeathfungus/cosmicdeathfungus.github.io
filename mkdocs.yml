@@ -1,0 +1,99 @@
+site_name: Cosmic Death Fungus
+site_url: https://cosmicdeathfungus.github.io
+site_description: The NAC Protocol — Community Documentation for Addressing Systemic Fungal Infection
+site_author: Peribsen & MacLir | cosmicdeathfungus community
+repo_url: https://github.com/cosmicdeathfungus/cosmicdeathfungus.github.io
+repo_name: cosmicdeathfungus
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Overview:
+      - Introduction: overview/introduction.md
+      - Defining the Enemy: overview/defining-the-enemy.md
+      - Common Yeast Species: overview/common-yeast.md
+      - Aspergillus: overview/aspergillus.md
+      - Cryptococcus: overview/cryptococcus.md
+  - Origins of Disease:
+      - Inflammation: origins-of-disease/inflammation.md
+      - Disease Connections: origins-of-disease/disease-connections.md
+  - NAC Protocol:
+      - Introduction: nac-protocol/introduction.md
+      - The Protocol: nac-protocol/protocol.md
+      - Die-Off & Herxheimer: nac-protocol/die-off.md
+      - Diet: nac-protocol/diet.md
+      - Experiences: nac-protocol/experiences.md
+  - Maintenance Protocol:
+      - Overview: maintenance-protocol/index.md
+  - Science:
+      - NAC (N-Acetyl Cysteine): science/nac.md
+      - Oregano Oil: science/oregano-oil.md
+      - Black Seed Oil: science/black-seed-oil.md
+  - History & Context:
+      - Origins: history/index.md
+  - Community:
+      - Contributing: community/contributing.md
+      - Experience Reports: community/experiences.md
+      - Translations: community/translations.md
+  - Legal:
+      - Medical Disclaimer: legal/disclaimer.md
+      - License: legal/license.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/reddit
+      link: https://reddit.com/r/cosmicdeathfungus
+      name: r/cosmicdeathfungus on Reddit
+    - icon: fontawesome/brands/github
+      link: https://github.com/cosmicdeathfungus/cosmicdeathfungus.github.io
+      name: Source on GitHub
+
+copyright: >
+  Content &copy; Peribsen &amp; MacLir &mdash; Licensed under
+  <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.
+  <strong>Not medical advice.</strong> This is community-documented information only.
