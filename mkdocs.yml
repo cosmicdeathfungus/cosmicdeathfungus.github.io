@@ -81,8 +81,17 @@ nav:
       - NAC (N-Acetyl Cysteine): science/nac.md
       - Oregano Oil: science/oregano-oil.md
       - Black Seed Oil: science/black-seed-oil.md
+      - References: science/references.md
   - History & Context:
-      - Origins: history/index.md
+      - Overview: history/index.md
+      - Origin Of The Tribes: history/origin-of-the-tribes.md
+      - "Egypt: The Ennead & The Pharoahs": history/egypt.md
+      - Sumerian Legends: history/sumerian-legends.md
+      - Abrahamic Legends: history/abrahamic-legends.md
+      - Scandinavian Legends: history/scandinavian-legends.md
+      - Irish Legends: history/irish-legends.md
+      - Greek Legends: history/greek-legends.md
+      - Interplanetary Ordeal: history/interplanetary-ordeal.md
   - Community:
       - Contributing: community/contributing.md
       - Experience Reports: community/experiences.md
