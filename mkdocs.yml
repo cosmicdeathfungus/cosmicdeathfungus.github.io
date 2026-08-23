@@ -47,6 +47,15 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  # Renders `:material-flask:` / `:octicons-arrow-right-24:` shorthand as inline
+  # SVG icons. Without this, Material's icon syntax leaks through as literal text.
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  # Makes bare URLs clickable, so a pasted source link is never dead text.
+  - pymdownx.magiclink:
+      repo_url_shorthand: false
+      social_url_shorthand: false
   - pymdownx.tabbed:
       alternate_style: true
   - attr_list
