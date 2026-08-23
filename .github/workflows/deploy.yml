@@ -42,6 +42,11 @@ jobs:
           path: site/
 
   deploy:
+    # The Pages site is served from the upstream repository, so a fork has no
+    # Pages target and this step can only fail there. Skipping it keeps fork
+    # runs green while `build` above still checks every push and pull request
+    # for real.
+    if: github.repository == 'cosmicdeathfungus/cosmicdeathfungus.github.io'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
