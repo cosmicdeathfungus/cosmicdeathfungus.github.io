@@ -68,6 +68,16 @@
 }
 
 /* --------------------------------------------------------------------------
+   Palette radios — this site has no visible colour toggle; the scheme follows
+   the device preference (see the palette block in mkdocs.yml). Material still
+   renders its palette inputs, and by default they are merely zero-size, so
+   keyboard focus can reach them and an arrow key would silently pin a scheme.
+   -------------------------------------------------------------------------- */
+.md-option {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
    Typography — give the body the cadence of a typeset paper: generous
    leading, old-style numerals, and a comfortable measure.
    -------------------------------------------------------------------------- */

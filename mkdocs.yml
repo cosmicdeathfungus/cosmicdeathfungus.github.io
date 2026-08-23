@@ -11,14 +11,26 @@ theme:
   # No palette toggle: the colour scheme follows the visitor's operating-system
   # / browser preference automatically.
   #
-  # The leading `(prefers-color-scheme)` entry is what makes this *stay*
-  # automatic. Material stores the resolved palette in localStorage and, on
-  # every later visit, trusts that stored index instead of re-evaluating the
-  # media queries — so a light/dark pair alone freezes a visitor into whichever
-  # scheme they happened to arrive with. This "automatic" entry is the one case
-  # Material re-resolves against `matchMedia` on each load, from the two
-  # entries below it.
+  # Only an entry whose media query is exactly `(prefers-color-scheme)` is
+  # re-resolved against `matchMedia` on every load and on live OS switches;
+  # for any other entry Material trusts what it last wrote to localStorage,
+  # freezing the visitor into that scheme. And what it stores is just the
+  # entry's *index*, interpreted against whatever list is deployed later.
+  #
+  # Both automatic entries below are therefore load-bearing — the second is
+  # NOT a copy-paste mistake. Earlier versions of this site shipped a
+  # two-entry light/dark list, so returning visitors still carry `{index: 0}`
+  # (light) or `{index: 1}` (dark). When a single automatic entry was later
+  # prepended, `{index: 1}` suddenly named the *light* entry, permanently
+  # pinning exactly the former dark-mode visitors to light. With indexes 0
+  # AND 1 both automatic, every index a shipped config has ever written
+  # resolves to "follow the device"; first-time visitors match entry 0. The
+  # light and dark entries supply the colours the automatic ones resolve to —
+  # they are not selectable on their own (see `.md-option` in extra.css).
   palette:
+    - media: "(prefers-color-scheme)"
+      primary: custom
+      accent: custom
     - media: "(prefers-color-scheme)"
       primary: custom
       accent: custom
