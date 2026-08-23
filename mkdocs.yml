@@ -9,8 +9,19 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   # No palette toggle: the colour scheme follows the visitor's operating-system
-  # / browser preference automatically via the `media` queries below.
+  # / browser preference automatically.
+  #
+  # The leading `(prefers-color-scheme)` entry is what makes this *stay*
+  # automatic. Material stores the resolved palette in localStorage and, on
+  # every later visit, trusts that stored index instead of re-evaluating the
+  # media queries — so a light/dark pair alone freezes a visitor into whichever
+  # scheme they happened to arrive with. This "automatic" entry is the one case
+  # Material re-resolves against `matchMedia` on each load, from the two
+  # entries below it.
   palette:
+    - media: "(prefers-color-scheme)"
+      primary: custom
+      accent: custom
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: custom
