@@ -141,3 +141,28 @@
 .md-typeset pre > code {
   font-size: 0.74rem;
 }
+
+/* ---------------------------------------------------------------------------
+   Citations & bibliography
+   In-text markers such as [12] link to the matching entry on the References
+   page via an empty <a id="ref-12"> anchor placed at the start of that entry.
+   --------------------------------------------------------------------------- */
+
+/* Superscript-free but visually lighter than body links, so a paragraph full of
+   citations still reads as prose. */
+.md-typeset a[href*="#ref-"] {
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+}
+
+/* Clear the sticky header when jumping to an entry. */
+.md-typeset a[id^="ref-"] {
+  display: inline-block;
+  scroll-margin-top: 4rem;
+}
+
+/* Briefly mark the entry the reader just jumped to. */
+.md-typeset li:has(> a[id^="ref-"]:target) {
+  background: var(--md-accent-fg-color--transparent, rgba(128, 128, 128, 0.12));
+  box-shadow: -0.4rem 0 0 var(--md-accent-fg-color--transparent, rgba(128, 128, 128, 0.12));
+}
