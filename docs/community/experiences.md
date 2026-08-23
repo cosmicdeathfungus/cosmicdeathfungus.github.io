@@ -1,9 +1,6 @@
 ---
 title: Experience Reports
 description: Community-curated, first-person experience reports. Anecdotal, not medical evidence.
-tags:
-  - community
-  - experiences
 ---
 
 # Community Experience Reports
