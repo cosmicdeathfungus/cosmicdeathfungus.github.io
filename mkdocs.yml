@@ -8,19 +8,17 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  # No palette toggle: the colour scheme follows the visitor's operating-system
+  # / browser preference automatically via the `media` queries below.
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: custom
       accent: custom
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: custom
       accent: custom
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -41,7 +39,6 @@ extra_css:
 
 plugins:
   - search
-  - tags
 
 markdown_extensions:
   - admonition

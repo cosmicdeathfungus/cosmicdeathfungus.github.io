@@ -1,12 +1,6 @@
 ---
 title: Cosmic Death Fungus — The NAC Protocol
 description: Community documentation for the NAC Protocol — a community-developed approach to addressing systemic fungal and Candida-related issues. Canonical, openly-licensed, version-controlled.
-tags:
-  - NAC protocol
-  - Candida
-  - biofilm
-  - oregano oil
-  - black seed oil
 ---
 
 # Cosmic Death Fungus

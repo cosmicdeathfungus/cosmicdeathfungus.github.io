@@ -1,8 +1,6 @@
 ---
 title: License
 description: This documentation is licensed under Creative Commons Attribution-ShareAlike 4.0 International.
-tags:
-  - legal
 ---
 
 # License
