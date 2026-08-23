@@ -1,8 +1,6 @@
 ---
 title: Contributing
 description: How to contribute corrections, sources, experience reports, and translations to the community documentation.
-tags:
-  - community
 ---
 
 # Contributing

@@ -1,8 +1,6 @@
 ---
 title: Medical Disclaimer
 description: This documentation is community-maintained information and is not medical advice.
-tags:
-  - legal
 ---
 
 # Medical Disclaimer

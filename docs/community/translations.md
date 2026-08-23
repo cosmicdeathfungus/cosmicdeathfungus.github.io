@@ -1,9 +1,6 @@
 ---
 title: Translations
 description: How to translate the CDF NAC Protocol documentation into other languages.
-tags:
-  - community
-  - translations
 ---
 
 # Translations
